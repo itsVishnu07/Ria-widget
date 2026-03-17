@@ -1,0 +1,38 @@
+
+
+@import "tailwindcss";
+
+:root {
+  --bg-chat: #FBFCFE;
+  --fg-chat: #1A2744;
+  --primary: #5C94FF;
+  --accent: #E0E7FF;
+  --muted: #F7F6F2;
+  --panel-shadow: 0 10px 30px -5px rgba(26, 39, 68, 0.08), 0 15px 15px -10px rgba(26, 39, 68, 0.05);
+  --glass-bg: rgba(251, 252, 254, 0.85);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-chat: #0F1318;
+    --fg-chat: #F5F7FA;
+    --glass-bg: rgba(15, 19, 24, 0.9);
+    --muted: #1A202C;
+  }
+}
+
+.ria-glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--panel-shadow);
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
